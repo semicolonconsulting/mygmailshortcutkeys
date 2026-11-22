@@ -5,15 +5,15 @@ Build the packages first:
 
 ```sh
 npm run build
-# dist/shortcut-keys-for-gmail-chrome-<version>.zip
-# dist/shortcut-keys-for-gmail-firefox-<version>.zip
+# dist/my-shortcut-keys-for-gmail-chrome-<version>.zip
+# dist/my-shortcut-keys-for-gmail-firefox-<version>.zip
 ```
 
 ## Chrome Web Store
 
 1. Register as a developer at https://chrome.google.com/webstore/devconsole
    (one-time US$5 fee, plus account verification).
-2. **Add new item** → upload `dist/shortcut-keys-for-gmail-chrome-<version>.zip`.
+2. **Add new item** → upload `dist/my-shortcut-keys-for-gmail-chrome-<version>.zip`.
 3. **Store listing** tab
    - Description and summary from listing.md. Category: Productivity → Communication.
    - Language: English.
@@ -32,7 +32,7 @@ npm run build
 
 1. Sign in at https://addons.mozilla.org/developers/ with a Mozilla account (free).
 2. **Submit a New Add-on** → *On this site* (listed) → upload
-   `dist/shortcut-keys-for-gmail-firefox-<version>.zip`.
+   `dist/my-shortcut-keys-for-gmail-firefox-<version>.zip`.
 3. Validation should pass. When asked about source code, answer **No** (no build tools,
    no minification).
 4. Fill in name, summary, description from listing.md. Category: Social & Communication.

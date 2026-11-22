@@ -33,7 +33,7 @@ for (const name of wanted) {
   mkdirSync(out, { recursive: true });
   cpSync(src, out, { recursive: true });
   writeFileSync(join(out, 'manifest.json'), JSON.stringify(targets[name](base), null, 2) + '\n');
-  const zip = join(dist, `shortcut-keys-for-gmail-${name}-${base.version}.zip`);
+  const zip = join(dist, `my-shortcut-keys-for-gmail-${name}-${base.version}.zip`);
   if (existsSync(zip)) rmSync(zip);
   execFileSync('zip', ['-qr', '-X', zip, '.'], { cwd: out });
   console.log(`built ${name}: dist/${name}/ and ${zip.slice(root.length + 1)}`);

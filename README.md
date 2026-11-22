@@ -1,4 +1,4 @@
-# Shortcut Keys for Gmail
+# My Shortcut Keys for Gmail
 
 A Chrome and Firefox extension (Manifest V3, one shared codebase) that adds
 familiar, customizable keyboard shortcuts to Gmail.

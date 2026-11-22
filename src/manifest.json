@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Shortcut Keys for Gmail",
+  "name": "My Shortcut Keys for Gmail",
   "short_name": "Gmail Keys",
   "version": "0.1.0",
   "description": "Delete, archive and undo in Gmail with familiar keys, and map any key to any Gmail action.",
@@ -29,7 +29,7 @@
     "open_in_tab": true
   },
   "action": {
-    "default_title": "Shortcut Keys for Gmail: settings",
+    "default_title": "My Shortcut Keys for Gmail: settings",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png"

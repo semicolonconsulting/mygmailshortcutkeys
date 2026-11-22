@@ -38,7 +38,7 @@
     try {
       actions.perform(action);
     } catch (err) {
-      console.warn('[Shortcut Keys for Gmail] action failed:', action, err);
+      console.warn('[My Shortcut Keys for Gmail] action failed:', action, err);
     }
   }
 

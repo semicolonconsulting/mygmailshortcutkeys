@@ -1,8 +1,8 @@
-# Privacy policy: Shortcut Keys for Gmail
+# Privacy policy: My Shortcut Keys for Gmail
 
 _Last updated: 22 November 2026_
 
-Shortcut Keys for Gmail does not collect, store, send or sell any personal data.
+My Shortcut Keys for Gmail does not collect, store, send or sell any personal data.
 
 **What it does.** The extension runs only on `https://mail.google.com/`. It listens
 for the keys you have set up and, when one is pressed, clicks the matching Gmail

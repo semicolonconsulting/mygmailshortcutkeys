@@ -3,7 +3,7 @@
 Copy these into the Chrome Web Store and Firefox Add-ons forms.
 
 ## Name
-Shortcut Keys for Gmail
+My Shortcut Keys for Gmail
 
 ## Summary (Chrome "Summary", Firefox "Summary"; 132 characters max)
 Delete, archive and undo in Gmail with familiar keys, and map any key to any Gmail action.

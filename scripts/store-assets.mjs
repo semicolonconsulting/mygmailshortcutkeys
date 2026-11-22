@@ -32,7 +32,7 @@ const hero = `<!doctype html><html><head><meta charset="utf-8"><style>${css}
   .alt { font-size: 22px; color: #9aa0a6; margin-left: 18px; }
   .foot { margin-top: 48px; font-size: 24px; color: #bdc1c6; }
 </style></head><body>
-  <div class="top"><img src="${icon}"><div><h1>Shortcut Keys for Gmail</h1>
+  <div class="top"><img src="${icon}"><div><h1>My Shortcut Keys for Gmail</h1>
     <div class="sub">Familiar keys for your inbox. Map any key to any Gmail action.</div></div></div>
   <div class="row"><div class="keys"><span class="kc">delete</span></div><span class="act">Delete</span></div>
   <div class="row"><div class="keys"><span class="kc">⌘</span><span class="kc">←</span></div><span class="act">Archive</span><span class="alt">Ctrl + ← on Windows</span></div>
@@ -48,7 +48,7 @@ const tile = `<!doctype html><html><head><meta charset="utf-8"><style>${css}
   .keys { display: flex; gap: 14px; font-size: 22px; }
   .k { display: flex; }
 </style></head><body>
-  <div class="top"><img src="${icon}"><h1>Shortcut Keys<br>for Gmail</h1></div>
+  <div class="top"><img src="${icon}"><h1>My Shortcut Keys<br>for Gmail</h1></div>
   <div class="keys"><div class="k"><span class="kc">delete</span></div><div class="k"><span class="kc">⌘</span><span class="kc">←</span></div><div class="k"><span class="kc">⌘</span><span class="kc">Z</span></div></div>
 </body></html>`;
 
