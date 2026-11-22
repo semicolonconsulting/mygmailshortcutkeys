@@ -62,6 +62,8 @@ scripts/build.mjs        builds dist/chrome and dist/firefox
 scripts/make-icons.py    redraws the icons (needs Pillow)
 test/keys.test.mjs       unit tests (npm test)
 test/e2e.mjs             loads the built extension in Chromium against a mock Gmail page (npm run test:e2e, needs Playwright)
+store/                 listing text, store images, publishing guide (store/PUBLISHING.md)
+PRIVACY.md             privacy policy linked from both stores
 ```
 
 ## Tests
