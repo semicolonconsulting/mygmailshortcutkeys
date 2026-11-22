@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shortcut Keys for Gmail</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header>
+      <img src="../icons/icon48.png" alt="" width="40" height="40">
+      <div>
+        <h1>Shortcut Keys for Gmail</h1>
+        <p class="sub">Map keys to Gmail actions. Changes save automatically and apply to open Gmail tabs right away.</p>
+      </div>
+    </header>
+
+    <label class="toggle">
+      <input type="checkbox" id="enabled">
+      <span>Shortcuts enabled</span>
+    </label>
+
+    <section>
+      <table>
+        <thead>
+          <tr><th>Key</th><th>Action</th><th class="sr">Remove</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <p id="empty" class="empty" hidden>No shortcuts yet. Add one below.</p>
+      <div class="buttons">
+        <button id="add" class="primary">Add shortcut</button>
+        <button id="reset">Reset to defaults</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="notes">
+      <h2>Good to know</h2>
+      <ul>
+        <li>Shortcuts never fire while you are typing in a compose window, a reply, the search box or any other text field.</li>
+        <li><span class="kbd" data-mod></span> means <span id="mod-name"></span> on this computer. Settings sync across your browsers, so a shortcut set on a Mac uses Ctrl on Windows and Linux.</li>
+        <li>Undo clicks the Undo link Gmail shows after an action, so it works for as long as Gmail offers it.</li>
+        <li>Some actions (star, reply, newer/older, and others) use Gmail's own keyboard shortcuts behind the scenes. If one does nothing, turn on <em>Settings → See all settings → General → Keyboard shortcuts on</em> in Gmail.</li>
+      </ul>
+    </section>
+  </main>
+  <script src="../shared/keys.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

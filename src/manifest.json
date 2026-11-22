@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Shortcut Keys for Gmail",
+  "short_name": "Gmail Keys",
+  "version": "0.1.0",
+  "description": "Delete, archive and undo in Gmail with familiar keys, and map any key to any Gmail action.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["shared/keys.js", "content/actions.js", "content/content.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content/page-bridge.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "Shortcut Keys for Gmail: settings",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  }
+}

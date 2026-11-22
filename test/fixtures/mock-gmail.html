@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Mock Gmail</title>
+<style>
+  .btn { display: inline-block; padding: 4px 8px; border: 1px solid #ccc; margin: 2px; }
+  .hidden-toolbar { display: none; }
+  .row.sel { background: #def; }
+  #toast { display: none; }
+</style></head>
+<body>
+  <!-- Gmail keeps hidden duplicate toolbars around; these must be ignored. -->
+  <div class="hidden-toolbar"><div role="button" aria-label="Archive" act="7" class="btn" id="hidden-archive">Archive</div></div>
+  <div id="toolbar">
+    <div role="button" aria-label="Archive" act="7" class="btn" id="archive">Archive</div>
+    <div role="button" aria-label="Delete" act="10" class="btn" id="delete">Delete</div>
+  </div>
+  <form role="search"><input name="q" id="search" placeholder="Search mail"></form>
+  <div id="list">
+    <div class="row sel" id="m1">Message 1</div>
+    <div class="row" id="m2">Message 2</div>
+    <div class="row" id="m3">Message 3</div>
+  </div>
+  <div role="alert" id="toast">Done. <span id="link_undo" role="link">Undo</span></div>
+  <div role="dialog" id="compose">
+    <input id="to" aria-label="To">
+    <div id="body" contenteditable="true" role="textbox" aria-label="Message Body">hello</div>
+  </div>
+  <script>
+    window.log = [];
+    let last = null;
+    function selected() { return document.querySelector('.row.sel'); }
+    function act(name) {
+      const row = selected();
+      if (!row) return;
+      log.push(name + ':' + row.id);
+      last = { row, next: row.nextElementSibling, parent: row.parentNode };
+      const nxt = row.nextElementSibling || row.previousElementSibling;
+      row.remove();
+      row.classList.remove('sel');
+      if (nxt) nxt.classList.add('sel');
+      document.getElementById('toast').style.display = 'block';
+    }
+    // Gmail buttons fire on mouseup after mousedown.
+    for (const id of ['archive', 'delete', 'hidden-archive']) {
+      const el = document.getElementById(id);
+      let down = false;
+      el.addEventListener('mousedown', () => { down = true; });
+      el.addEventListener('mouseup', () => { if (down) act(id === 'delete' ? 'delete' : 'archive'); down = false; });
+    }
+    document.getElementById('link_undo').addEventListener('click', () => {
+      if (!last) return;
+      document.querySelectorAll('.row.sel').forEach((r) => r.classList.remove('sel'));
+      last.parent.insertBefore(last.row, last.next && last.next.isConnected ? last.next : null);
+      last.row.classList.add('sel');
+      log.push('undo:' + last.row.id);
+      last = null;
+      document.getElementById('toast').style.display = 'none';
+    });
+    // Record what reaches the page, like Gmail's own shortcut handler would see it.
+    document.addEventListener('keypress', (e) => {
+      if (!e.isTrusted) log.push('native:' + e.key + ':' + e.keyCode);
+    });
+    document.addEventListener('keydown', (e) => { if (e.isTrusted) log.push('pagekey:' + e.key); });
+  </script>
+</body>
+</html>
