@@ -18,6 +18,14 @@ Shortcuts never fire while you are typing: compose, inline replies, To/Cc fields
 the search box, any text field, and during IME composition (e.g. Japanese input).
 Holding a key down does not repeat the action.
 
+## Install
+
+- **Chrome / Edge / Brave:** [My Shortcut Keys for Gmail on the Chrome Web Store](https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob)
+- **Firefox:** the Firefox Add-ons listing is coming soon. Until then, load it
+  from source as described below.
+
+After installing, click the toolbar icon to open the settings page.
+
 ## Install for development
 
 ```sh
