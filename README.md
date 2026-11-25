@@ -1,82 +1,56 @@
-# My Shortcut Keys for Gmail
+<img src="./src/icons/icon128.png" width="100px" align="left" alt="My Shortcut Keys for Gmail icon">
 
-A Chrome and Firefox extension (Manifest V3, one shared codebase) that adds
-familiar, customizable keyboard shortcuts to Gmail.
+### `My Shortcut Keys for Gmail`
 
-| Key (macOS) | Key (Windows / Linux) | Action |
-|---|---|---|
-| `delete` (Backspace) or `fn`+`delete` | `Delete` or `Backspace` | Delete the selected or open email |
-| `⌘` `←` | `Ctrl` `←` | Archive |
-| `⌘` `Z` | `Ctrl` `Z` | Undo the last action (clicks Gmail's own Undo) |
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/npcmjpdpogdfnlhagpoclfkhfjbpgmob?label=chrome%20web%20store&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob)
+[![Chrome Web Store users](https://img.shields.io/chrome-web-store/users/npcmjpdpogdfnlhagpoclfkhfjbpgmob?label=users)](https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob)
+[![Firefox Add-ons](https://img.shields.io/amo/v/my-shortcut-keys-for-gmail?label=firefox%20add-ons&logo=firefoxbrowser&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/my-shortcut-keys-for-gmail/)
+[![Firefox Add-ons users](https://img.shields.io/amo/users/my-shortcut-keys-for-gmail?label=users)](https://addons.mozilla.org/en-US/firefox/addon/my-shortcut-keys-for-gmail/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Any key combination can be mapped to any of 24 actions (archive, delete, undo,
-read/unread, spam, star, important, mute, snooze, move, label, reply, reply all,
-forward, compose, newer/older, back to list, search, go to Inbox/Sent/Starred/Drafts)
-on the options page. Settings sync through the browser account.
+My Shortcut Keys for Gmail brings familiar keys to your inbox. Press Delete to delete, ⌘← to archive and ⌘Z to undo, or map any key to any Gmail action.
 
-Shortcuts never fire while you are typing: compose, inline replies, To/Cc fields,
-the search box, any text field, and during IME composition (e.g. Japanese input).
-Holding a key down does not repeat the action.
+<div flex="true">
+  <a href="https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob">
+    Add to Chrome
+  </a>
+  •
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/my-shortcut-keys-for-gmail/">
+    Add to Firefox
+  </a>
+  •
+  <a href="docs/guide.md">
+    Documentation
+  </a>
+  •
+  <a href="PRIVACY.md">
+    Privacy
+  </a>
+</div>
 
-## Install
+<br>
 
-- **Chrome / Edge / Brave:** [My Shortcut Keys for Gmail on the Chrome Web Store](https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob)
-- **Firefox:** the Firefox Add-ons listing is coming soon. Until then, load it
-  from source as described below.
+<img src="./store/screenshot-1-hero.png" width="640" alt="My Shortcut Keys for Gmail: delete to Delete, Command and Left Arrow to Archive, Command and Z to Undo">
 
-After installing, click the toolbar icon to open the settings page.
+### What it does
 
-## Install for development
+- **Familiar keys out of the box.** `delete` (Backspace) deletes the selected or open email, `⌘` `←` archives it and `⌘` `Z` undoes the last action. On Windows and Linux, use `Ctrl` instead of `⌘`.
+- **Map any key to any action.** Pick from 24 actions on the settings page: archive, delete, undo, read/unread, spam, star, important, mute, snooze, move, label, reply, reply all, forward, compose, newer/older, back to list, search, and go to Inbox, Sent, Starred or Drafts.
+- **Stays out of your way while you type.** Shortcuts never fire in compose, inline replies, To/Cc fields, the search box or any text field, nor during IME composition such as Japanese input. Holding a key down does not repeat the action.
+- **Settings follow you.** Your key map syncs through your browser account.
 
-```sh
-npm run build          # writes dist/chrome, dist/firefox and a zip of each
-```
+### Install
 
-- **Chrome / Edge / Brave:** open `chrome://extensions`, turn on Developer mode,
-  click *Load unpacked*, pick `dist/chrome`.
-- **Firefox (128+):** open `about:debugging#/runtime/this-firefox`, click
-  *Load Temporary Add-on…*, pick `dist/firefox/manifest.json`.
+Add it from the [Chrome Web Store](https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob) for Chrome, Edge, Brave and other Chromium browsers, or from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/my-shortcut-keys-for-gmail/) for Firefox 128 or later. After installing, click the toolbar icon to open the settings page. Some actions need **Gmail Settings → See all settings → General → Keyboard shortcuts on** (see the [Guide](docs/guide.md#how-actions-run)).
 
-Click the toolbar icon to open the settings page.
+### Contributing
 
-## How actions run
+Bugs and ideas are welcome in [GitHub Issues](https://github.com/semicolonconsulting/mygmailshortcutkeys/issues). To build the extension yourself or run the tests, see [Build from source](docs/building.md).
 
-Each action tries, in order (see `src/content/actions.js`):
+### Privacy
 
-1. A direct method where one exists (Undo link in Gmail's notification bar, the
-   search box, `#inbox`-style navigation).
-2. Clicking the visible Gmail toolbar button, matched by its English label and
-   then by Gmail's language-independent `act` code.
-3. Sending Gmail's own keyboard shortcut (`#`, `e`, `z`, `s`, …). This needs
-   **Gmail Settings → See all settings → General → Keyboard shortcuts on**.
-   Star, important, mute, reply, reply all, forward, and newer/older always use
-   this route.
+My Shortcut Keys for Gmail collects no data. See [Privacy](PRIVACY.md).
 
-Gmail changes its markup from time to time; if an action stops working, step 2
-is the usual culprit and step 3 keeps it working when shortcuts are on.
+### License
 
-## Layout
-
-```
-src/
-  manifest.json          shared manifest (build adds the browser-specific bits)
-  background.js          toolbar button and first install open the settings page
-  shared/keys.js         key-combo parsing, action list, defaults, typing guard
-  content/actions.js     how each action is carried out in Gmail
-  content/content.js     keydown listener on mail.google.com
-  content/page-bridge.js page-world helper that sends Gmail's native shortcuts
-  options/               settings page
-scripts/build.mjs        builds dist/chrome and dist/firefox
-scripts/make-icons.py    redraws the icons (needs Pillow)
-test/keys.test.mjs       unit tests (npm test)
-test/e2e.mjs             loads the built extension in Chromium against a mock Gmail page (npm run test:e2e, needs Playwright)
-store/                 listing text, store images, publishing guide (store/PUBLISHING.md)
-PRIVACY.md             privacy policy linked from both stores
-```
-
-## Tests
-
-```sh
-npm test                               # unit tests
-npm run build && npm run test:e2e      # browser tests
-```
+MIT. See [LICENSE](LICENSE).
