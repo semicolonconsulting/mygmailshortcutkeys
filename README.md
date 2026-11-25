@@ -4,7 +4,8 @@
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/npcmjpdpogdfnlhagpoclfkhfjbpgmob?label=chrome%20web%20store&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob)
 [![Chrome Web Store users](https://img.shields.io/chrome-web-store/users/npcmjpdpogdfnlhagpoclfkhfjbpgmob?label=users)](https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob)
-[![Firefox 128+](https://img.shields.io/badge/Firefox-128%2B-orange?logo=firefoxbrowser&logoColor=white)](docs/guide.md#requirements)
+[![Firefox Add-ons](https://img.shields.io/amo/v/my-shortcut-keys-for-gmail?label=firefox%20add-ons&logo=firefoxbrowser&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/my-shortcut-keys-for-gmail/)
+[![Firefox Add-ons users](https://img.shields.io/amo/users/my-shortcut-keys-for-gmail?label=users)](https://addons.mozilla.org/en-US/firefox/addon/my-shortcut-keys-for-gmail/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 My Shortcut Keys for Gmail brings familiar keys to your inbox. Press Delete to delete, ⌘← to archive and ⌘Z to undo, or map any key to any Gmail action.
@@ -12,6 +13,10 @@ My Shortcut Keys for Gmail brings familiar keys to your inbox. Press Delete to d
 <div flex="true">
   <a href="https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob">
     Add to Chrome
+  </a>
+  •
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/my-shortcut-keys-for-gmail/">
+    Add to Firefox
   </a>
   •
   <a href="docs/guide.md">
@@ -36,7 +41,7 @@ My Shortcut Keys for Gmail brings familiar keys to your inbox. Press Delete to d
 
 ### Install
 
-Add it from the [Chrome Web Store](https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob). It works in Chrome, Edge, Brave and other Chromium browsers. The Firefox Add-ons listing is coming soon; until then, Firefox 128 or later can load it from source. After installing, click the toolbar icon to open the settings page. Some actions need **Gmail Settings → See all settings → General → Keyboard shortcuts on** (see the [Guide](docs/guide.md#how-actions-run)).
+Add it from the [Chrome Web Store](https://chromewebstore.google.com/detail/my-shortcut-keys-for-gmai/npcmjpdpogdfnlhagpoclfkhfjbpgmob) for Chrome, Edge, Brave and other Chromium browsers, or from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/my-shortcut-keys-for-gmail/) for Firefox 128 or later. After installing, click the toolbar icon to open the settings page. Some actions need **Gmail Settings → See all settings → General → Keyboard shortcuts on** (see the [Guide](docs/guide.md#how-actions-run)).
 
 ### Contributing
 
